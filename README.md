@@ -25,41 +25,30 @@ money.txt: A text file that tracks the machine's current balance and changes aft
 # Key Functions:
 itemsSetup.c:
 
-Functions for tracking available drink stock and coin amounts.
+- Functions for tracking available drink stock and coin amounts.
 
-soldOut() function that checks if an item is sold out.
+- soldOut() function that checks if an item is sold out.
 
-notEnoughMoney() function to check if the customer has enough funds for the selected drink.
+- notEnoughMoney() function to check if the customer has enough funds for the selected drink.
 
 machine.c:
 
-The main function that handles customer interactions.
+- The main function that handles customer interactions.
 
-Asks the customer for their payment and drink selection.
+- Asks the customer for their payment and drink selection.
 
-Handles drink selection, payment validation, and change return.
+- Handles drink selection, payment validation, and change return.
 
-If the customer doesn't choose anything, the machine returns their money.
+- If the customer doesn't choose anything, the machine returns their money.
 
 # Installation
 To compile and run the Coffee Machine project:
 
-Clone the repository or download the project files.
+- Clone the repository or download the project files.
 
-Navigate to the project directory.
+- Navigate to the project directory.
 
-# Compile the C files:
 
-bash
-Copy
-Edit
-gcc machine.c itemsSetup.c -o coffee_machine
-Run the executable:
-
-bash
-Copy
-Edit
-./coffee_machine
 # How to Use
 When prompted, input the amount of money you're inserting into the machine (or enter 0 to exit).
 
@@ -73,10 +62,7 @@ If there is an issue (e.g., insufficient funds or sold-out drinks), the machine 
 
 You can exit by choosing 0 and getting your money back.
 
-Example Output
-bash
-Copy
-Edit
+# Example Output: 
 Welcome to the Coffee Machine!
 
 Please insert money (or 0 to exit): 5
@@ -92,10 +78,11 @@ You selected Coffee. Please wait...
 
 Change to be returned: 2 KM
 Thank you for using the Coffee Machine!
-Problems Encountered
+
+# Problems Encountered
 The main challenge was implementing the change-return logic. Initially, I tried using a for loop to return change, but it became complicated due to edge cases (e.g., when the machine can't return the exact change).
 
 A while loop was used to improve the logic, allowing for more flexible handling of change return scenarios.
 
 # Contributions
-This project was developed as part of the CS103 course at the International University of Sarajevo. Special thanks to my brother for helping me solve the change-return issue by explaining the use of the while loop.
+This project was developed as part of the CS103 course at the International University of Sarajevo.
